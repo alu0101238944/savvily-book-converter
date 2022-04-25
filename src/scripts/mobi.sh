@@ -14,4 +14,6 @@ echo "$formattedManuscript" | timeout 600 pandoc \
     -o ./../output/ebook.epub \
     --metadata-file ../src/templates/epub/metadata.yml && \
 
-echo "EPUB successfully generated"
+ebook-convert ./../output/ebook.epub ./../output/ebook.mobi
+
+echo "MOBI successfully generated"
